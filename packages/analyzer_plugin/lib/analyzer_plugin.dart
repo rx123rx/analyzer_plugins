@@ -1,9 +1,10 @@
+import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/element/element.dart';
 
-abstract class AnalyzerPlugin {
+abstract class AnalyzerPlugin<T extends SomeLibraryElementResult> {
   String get name;
 
-  List<Diagnostics> run(LibraryElement result);
+  List<Diagnostics> run(T result);
 }
 
 enum DiagnosticsType { warning, error }

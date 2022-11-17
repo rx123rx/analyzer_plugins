@@ -24,7 +24,9 @@ Future<void> start(List<String> args, List<AnalyzerPlugin> plugins) async {
 
   await for (final event in driver.results) {
     final packagePath = event.session.uriConverter.pathToUri(event.path!);
-    final result = await event.session.getLibraryByUri(packagePath!.toString());
+    final result = await event.session.getLibraryByUri2(packagePath!.toString());
+    print('packagePath $packagePath');
+    print('result $result');
 
     for (final plugin in plugins) {
       try {

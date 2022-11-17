@@ -14,7 +14,7 @@ Future<void> main(
   List<AnalyzerPlugin> plugins
 ) {
   return start(args, plugins);
-}  
+}
 ''',
   );
 }
