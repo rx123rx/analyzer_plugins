@@ -57,17 +57,17 @@ AnalysisDriver _createAnalysisDriver() {
   final contextBuilder = ContextBuilder(
     PhysicalResourceProvider.INSTANCE,
     DartSdkManager(defaultSdkPath),
-    null,
+    options: null,
   )
     ..performanceLog = logger
     ..byteStore = byteStore
-    ..fileContentOverlay = FileContentOverlay()
+    // ..fileContentOverlay = FileContentOverlay()
     ..analysisDriverScheduler = scheduler;
 
   final contextRoot = ContextRoot(
     // '',
 
-    '/Users/remirousselet/dev/analysis/packages/flutter_app_core',
+    '/Users/renxiao/Program/study/lint/analyzer_plugins/packages/flutter_app_core',
     [],
     pathContext: PhysicalResourceProvider.INSTANCE.pathContext,
   );
